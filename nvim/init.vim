@@ -83,6 +83,7 @@ set smartindent
 set relativenumber
 set nu
 set nohlsearch
+set ignorecase
 set hidden
 set noerrorbells
 set nowrap

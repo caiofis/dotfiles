@@ -3,6 +3,7 @@
 DPATH="/home/$USER/.dotfiles"
 
 # link dotfiles
+ln -fs $DPATH/.bashrc .bashrc
 mkdir -p /home/$USER/.config/nvim
 ln -fs $DPATH/nvim/* /home/$USER/.config/nvim
 sudo apt-get install git && ln -fs $DPATH/.gitconfig ~/.gitconfig
