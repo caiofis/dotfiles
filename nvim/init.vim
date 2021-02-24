@@ -70,6 +70,8 @@ let g:NERDTreeHighlightFoldersFullName = 1
 "     \ "Unknown"   : "?"
 "     \ }
 
+" Invert completion list of SuperTab
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4

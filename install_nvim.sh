@@ -8,9 +8,6 @@ sudo apt-get install -y neovim
 # install a plugin manager
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# install nodejs for coc.nvim
-if [ ! -x "$(command -v node)"]; then sudo apt-get install nodejs; fi
-
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes n | ~/.fzf/install
