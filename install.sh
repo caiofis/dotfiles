@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DPATH="/home/$USER/.dotfiles"
+DPATH=$(cd `dirname $0` && pwd)
 
 # link dotfiles
 ln -sfn $DPATH/.bashrc ~/.bashrc

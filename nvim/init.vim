@@ -1,29 +1,24 @@
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'Vundle.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
+Plug 'vim-scripts/vim-gitgutter'
 
-Plugin 'vim-gitgutter'
+Plug 'davidhalter/jedi-vim'
 
-Plugin 'davidhalter/jedi-vim'
+Plug 'preservim/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin' 
+Plug 'ryanoasis/vim-devicons'
 
-Plugin 'preservim/nerdtree'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plugin 'Xuyuanp/nerdtree-git-plugin' 
-Plugin 'ryanoasis/vim-devicons'
+Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
 
-Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'ervandew/supertab'
 
-Plugin 'dracula/vim'
-Plugin 'morhetz/gruvbox'
+call plug#end()
 
-Plugin 'taglist.vim'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
 "Config Section
 
 "Colors
