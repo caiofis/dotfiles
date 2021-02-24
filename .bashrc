@@ -115,8 +115,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source /opt/ros/melodic/setup.bash
-source /home/dev/workspace/x86-install/setup.bash
+
+# ROS source
+if [ -f /opt/ros/melodic/setup.bash ]; then source /opt/ros/melodic/setup.bash; fi
+if [ -f /home/dev/workspace/x86-install/setup.bash ]; then source /home/dev/workspace/x86-install/setup.bash; fi
 
 # Clang-tools alias
 CATKIN_WS=~/workspace/citrus_x86
