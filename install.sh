@@ -4,6 +4,9 @@ DPATH=$(cd `dirname $0` && pwd)
 
 # link dotfiles
 ln -sfn $DPATH/.bashrc ~/.bashrc
+ln -sfn $DPATH/.clang-format ~/.clang-format
+ln -sfn $DPATH/.clang-tidy ~/.clang-tidy
+
 mkdir -p /home/$USER/.config/nvim
 ln -fsn $DPATH/nvim/* /home/$USER/.config/nvim
 sudo apt-get install git && ln -fs $DPATH/.gitconfig ~/.gitconfig

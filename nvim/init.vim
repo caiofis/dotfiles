@@ -91,7 +91,7 @@ set signcolumn=yes
 set splitbelow
 set splitright
 set clipboard=unnamedplus
-
+set autoread | au CursorHold * checktime | call feedkeys("lh")
 
 "Import roslaunch highlight
 au BufNewFile,BufRead,BufReadPost *.launch source ~/.config/nvim/roslaunch.vim
