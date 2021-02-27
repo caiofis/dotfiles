@@ -93,5 +93,26 @@ set splitright
 set clipboard=unnamedplus
 set autoread | au CursorHold * checktime | call feedkeys("lh")
 
+let $BASH_ENV = "~/.bash_aliases"
+
 "Import roslaunch highlight
 au BufNewFile,BufRead,BufReadPost *.launch source ~/.config/nvim/roslaunch.vim
+
+" Create clang functions
+function FormatBuffer()
+    let current_buffer = expand("%:p")
+    if len(current_buffer) != 0
+        execute "! clang-format-10 -i -style=file " . current_buffer 
+    endif
+endfunction
+
+function FormatDirectory()
+    let current_folder = expand("%:p:h")
+    if len(current_folder) != 0
+        execute "! clang-format-10 -i -style=file " . current_folder . "/*.cpp"
+        execute "! clang-format-10 -i -style=file " . current_folder . "/*.h"
+        execute "! clang-format-10 -i -style=file " . current_folder . "src/*.cpp"
+        execute "! clang-format-10 -i -style=file " . current_folder . "include/*.h"
+    endif
+endfunction
+

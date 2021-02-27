@@ -4,6 +4,7 @@ DPATH=$(cd `dirname $0` && pwd)
 
 # link dotfiles
 ln -sfn $DPATH/.bashrc ~/.bashrc
+ln -sfn $DPATH/.bash_aliases ~/.bash_aliases
 ln -sfn $DPATH/.clang-format ~/.clang-format
 ln -sfn $DPATH/.clang-tidy ~/.clang-tidy
 

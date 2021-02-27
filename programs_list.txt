@@ -1,3 +1,5 @@
 htop
 byobu
 cmake
+clang-format-10
+clang-tidy-10

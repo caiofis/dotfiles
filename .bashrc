@@ -118,13 +118,9 @@ fi
 
 # ROS source
 if [ -f /opt/ros/melodic/setup.bash ]; then source /opt/ros/melodic/setup.bash; fi
-if [ -f /home/dev/workspace/x86-install/setup.bash ]; then source /home/dev/workspace/x86-install/setup.bash; fi
-
-# Clang-tools alias
-CATKIN_WS=~/workspace/citrus_x86
-alias clang_tidy_ros='run-clang-tidy -p $CATKIN_WS/build/ ' 
-# Apply clang-format on current directory
-alias clang_format_directory='clang-format-10 -i -style=file src/*.cpp include/*.h' 
+if [ -f /home/$USER/workspace/x86-install/setup.bash ]; then source /home/$USER/workspace/x86-install/setup.bash; fi
+if [ -d /home/$USER/workspace/citrus_x86 ]; then CATKIN_WS=/home/$USER/workspace/citrus_x86; fi
+if [ -d /home/$USER/catkin_ws ]; then CATKIN_WS=/home/$USER/catkin_ws; fi
 
 alias vim="nvim"
 
