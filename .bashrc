@@ -119,7 +119,7 @@ fi
 # ROS source
 if [ -f /opt/ros/melodic/setup.bash ]; then source /opt/ros/melodic/setup.bash; fi
 if [ -f /home/$USER/workspace/x86-install/setup.bash ]; then source /home/$USER/workspace/x86-install/setup.bash; fi
-if [ -d /home/$USER/workspace/citrus_x86 ]; then CATKIN_WS=/home/$USER/workspace/citrus_x86; fi
+if [ -d /home/$USER/workspace/citrus_x86 ]; then CITRUS_WS=/home/$USER/workspace; fi
 if [ -d /home/$USER/catkin_ws ]; then CATKIN_WS=/home/$USER/catkin_ws; fi
 
 alias vim="nvim"

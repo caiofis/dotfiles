@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'vim-scripts/vim-gitgutter'
+"Plug 'vim-scripts/vim-gitgutter'
 
 Plug 'davidhalter/jedi-vim'
 
