@@ -10,7 +10,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-yes n | ~/.fzf/install
+yes | ~/.fzf/install
 
 # install NERDFonts
 mkdir -p ~/.local/share/fonts

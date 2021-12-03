@@ -1,9 +1,10 @@
-BasedOnStyle: Mozilla
+BasedOnStyle: Google
 IndentWidth: 4
-ColumnLimit: 100
+ColumnLimit: 80
 
 AlwaysBreakAfterDefinitionReturnType: None
 AlwaysBreakAfterReturnType: None
-BreakBeforeBraces: Allman
+BreakBeforeBraces: Attach
 SpacesInParentheses: true
-AllowAllArgumentsOnNextLine: false
+BinPackArguments: false
+BinPackParameters: false
