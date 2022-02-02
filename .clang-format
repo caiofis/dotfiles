@@ -1,6 +1,6 @@
 BasedOnStyle: Google
 IndentWidth: 4
-ColumnLimit: 80
+ColumnLimit: 100
 
 AlwaysBreakAfterDefinitionReturnType: None
 AlwaysBreakAfterReturnType: None
@@ -8,3 +8,4 @@ BreakBeforeBraces: Attach
 SpacesInParentheses: true
 BinPackArguments: false
 BinPackParameters: false
+AllowShortFunctionsOnASingleLine: None
