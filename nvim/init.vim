@@ -13,10 +13,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
 
-Plug 'ervandew/supertab'
+"Plug 'ervandew/supertab'
 
 Plug 'rhysd/vim-clang-format'
 Plug 'preservim/nerdcommenter'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -27,7 +29,6 @@ if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme dracula
 colorscheme gruvbox
 set bg=dark
 
@@ -71,13 +72,41 @@ let g:NERDTreeHighlightFoldersFullName = 1
 "     \ "Unknown"   : "?"
 "     \ }
 
-" Invert completion list of SuperTab
-let g:SuperTabDefaultCompletionType = "<c-n>"
-
 nmap <C-k> :ClangFormat<CR>
 vmap <C-k> :ClangFormat<CR>
 
+nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>
+
+let g:coc_global_extensions = [
+    \'coc-clangd',
+    \'coc-cmake',
+    \]
+" Settings
+set signcolumn=no
+set updatetime=300
+set shortmess+=c
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 set tabstop=4 softtabstop=4
 set shiftwidth=4

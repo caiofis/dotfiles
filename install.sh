@@ -28,6 +28,11 @@ sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/c
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
 sudo dpkg -i ripgrep_12.1.1_amd64.deb
 rm ripgrep_12.1.1_amd64.deb
+
+# install nodejs 
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt -y install nodejs
+
 # install nvim and plugins
 sh $DPATH/install_nvim.sh
 
