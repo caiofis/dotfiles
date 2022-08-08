@@ -17,6 +17,7 @@ Plug 'morhetz/gruvbox'
 
 Plug 'rhysd/vim-clang-format'
 Plug 'preservim/nerdcommenter'
+Plug 'preservim/tagbar'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -77,6 +78,9 @@ vmap <C-k> :ClangFormat<CR>
 
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>
+
+nmap <C-t> :TagbarToggle<CR>
+set statusline=%<%f\ %h%m%r%=%{tagbar#currenttag('%s\ ','','f')}%-.(%l,%c%V%)\ %P
 
 let g:coc_global_extensions = [
     \'coc-clangd',
